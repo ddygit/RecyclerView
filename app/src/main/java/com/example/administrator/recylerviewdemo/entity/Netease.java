@@ -8,12 +8,12 @@ import java.util.List;
 
 public class Netease {
 
-    private List<Ads> ads;
-    private List<Imgextras> imgextra;
-    private String alias, boardid, cid, digest, docid, ename, imgsrc, lmodify, photosetID,
+    public List<Ads> ads;
+    public List<Imgextras> imgextra;
+    public String alias, boardid, cid, digest, docid, ename, imgsrc, lmodify, photosetID,
             postid, ptime, skipID, skipType, source, template, title, tname;
-    private int hasAD, hasHead, hasImg, imgsum, order, priority, replyCount, votecount;
-    private boolean hasCover, hasIcon;
+    public int hasAD, hasHead, hasImg, imgsum, order, priority, replyCount, votecount;
+    public boolean hasCover, hasIcon;
 
     public Netease(List<Ads> ads, List<Imgextras> imgextra, String alias, String boardid, String cid, String digest, String docid, String ename, String imgsrc, String lmodify, String photosetID, String postid, String ptime, String skipID, String skipType, String source, String template, String title, String tname, int hasAD, int hasHead, int hasImg, int imgsum, int order, int priority, int replyCount, int votecount, boolean hasCover, boolean hasIcon) {
         this.ads = ads;
@@ -82,7 +82,7 @@ public class Netease {
                 '}';
     }
 
-    private class Ads {
+    public class Ads {
         private String imgsrc,subtitle,tag,title,url;
 
         public Ads(String imgsrc, String subtitle, String tag, String title, String url) {
@@ -145,9 +145,7 @@ public class Netease {
         }
     }
 
-    private class Imgextras {
-        private String imgsrc;
-
+    public class Imgextras {
         public Imgextras(String imgsrc) {
             this.imgsrc = imgsrc;
         }
@@ -160,12 +158,8 @@ public class Netease {
             this.imgsrc = imgsrc;
         }
 
-        @Override
-        public String toString() {
-            return "Imgextras{" +
-                    "imgsrc='" + imgsrc + '\'' +
-                    '}';
-        }
+        public String imgsrc;
+
     }
 
     public List<Ads> getAds() {
